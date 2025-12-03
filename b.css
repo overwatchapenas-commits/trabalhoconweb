@@ -81,7 +81,7 @@ footer {
 
 /* === CORPO === */
 .corpo {
-    background-image: url('img/rei9.jpeg');
+    background-image: url('rei9.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -210,7 +210,7 @@ nav:not(.navbar) ul li a:hover {
 /* === SEÇÃO HOME === */
 #home {
     background-color: var(--bg) !important;
-    background: url('img/rei5.jpg') center/cover no-repeat var(--bg) !important;
+    background: url('rei5.jpg') center/cover no-repeat var(--bg) !important;
     text-align: right;
     min-height: 60vh;
     flex-direction: column;
@@ -628,3 +628,4 @@ html.dark #home h1, html.dark #home h2{
     transition: opacity 360ms ease;
     opacity: 1;
 }
+
