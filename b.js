@@ -97,7 +97,7 @@ alert("Bem vindo a Nerv.");
 
                 function updateDisplayedPhoto(n){
                     if(!photo) return;
-                    const newSrc = (n < 10) ? 'img/rei2.png' : (n <= 20 ? 'img/rei3.jpg' : 'img/rei6.jpg');
+                    const newSrc = (n < 10) ? 'rei2.png' : (n <= 20 ? 'rei3.jpg' : 'rei6.jpg');
                     // se já for a mesma src, só garantir opacidade em 1
                     if(photo.src && photo.src.indexOf(newSrc) !== -1){ photo.style.opacity = '1'; return; }
                     // animação de fade: reduzir opacidade, trocar src, então restaurar opacidade quando carregar
@@ -119,4 +119,5 @@ alert("Bem vindo a Nerv.");
                 });
             }
             if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initPhotoCounter); else initPhotoCounter();
+
         })();
