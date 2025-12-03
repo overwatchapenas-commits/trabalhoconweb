@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei Ayanami</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="b.css">
+    <link rel="stylesheet" href="img.css">
+</head>
+<body>
+    
+    <!--  COLOCAR A ABA ALMA E PSIQUE NA DIREITA DE HISTORIA, MOVER UNIDADE EVA 00 PRA ESQUERDA E COLOCAR O FORMULARIO NA DIREITA DELE (IDEIA!)  -->
+
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="nerv.png" alt="NERV" width="30" height="30" class="d-inline-block align-text-top me-2">
+                    Rei Ayanami
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hst1">História</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mnt1">Mente e Alma</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#suj">Sugestões</a></li>
+                    </ul>
+                    <form class="d-flex" role="search" onsubmit="return false;">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                    <div class="d-flex align-items-center ms-3">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-light" type="button" title="Alternar tema">🌓</button>
+                        <div style="position:relative;">
+                            <button id="color-settings-toggle" class="btn btn-sm btn-outline-light ms-2" type="button" title="Cores">🎨</button>
+                            <div id="color-panel" aria-hidden="true" style="display:none; position:absolute; top:44px; right:0; background:var(--surface); color:var(--text); padding:8px; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,0.15); z-index:9999; min-width:220px;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px;"><label style="font-size:12px;">Página</label><input id="bgColor" type="color"></div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px;"><label style="font-size:12px;">Superfície</label><input id="surfaceColor" type="color"></div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px;"><label style="font-size:12px;">Texto</label><input id="textColor" type="color"></div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px;"><label style="font-size:12px;">Navbar</label><input id="navbarBg" type="color"></div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px;"><label style="font-size:12px;">Navbar Texto</label><input id="navbarText" type="color"></div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:6px;"><label style="font-size:12px;">Bloco Texto</label><input id="textBlockBg" type="color"></div>
+                                <div style="text-align:right; margin-top:6px;"><button id="reset-colors" class="btn btn-sm btn-secondary">Reset</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+    <section id="home">
+        <div class="container2">
+            <section class="home-txt">
+                <h1>Quem (ou o que) é Rei Ayanami?</h1>
+                <h2>A vida e história da "Primeira Criança".</h2>
+            </section>
+
+            <section>
+                <ul class="home-im">
+                    <li><img class="clone" src="img/clonando.jpg"></li>
+                    <li><img class="rei2" src="img/rei2.png"></li>
+                </ul>
+            </section>
+        </div> <!--  container 2  -->
+    </section> <!--  home  -->
+
+                                         <!--        MUDAR FUNDO DO TEXTO?         -->
+        
+
+    <div class="corpo">
+        <section id="hst1">
+            <div class="container3">
+        <section id="hst">
+            <h2>A História de Rei</h2>
+            <ul class="hist-im">
+                <li><img class="rei3" src="img/rei3.jpg"></li>
+                <li><img class="machuc" src="img/machucada.jpg"></li>
+            </ul>
+           <p>Rei Ayanami é apresentada como "A Primeira Criança" - como são chamados os pilotos, as "Crianças" - e carrega mistérios e dúvidas por parte dos outros personagens do anime devido ao seu comportamento
+               peculiar. Ayanami não conversa com ninguém, não se diverte, não tem hobbies, e sua proximidade com Gendo Ikari (criador e presidente da Nerv, e membro do conselho da Seele) é motivo de dúvidas para 
+               muitos funcionários. É fechada, mas não do tipo reservada: parece mais uma casca vazia, uma marionete que segue as ordens de seu ventríloco sem hesitar nem questionar ou até mesmo sem se preocupar 
+               consigo mesmo, sem mostrar emoções, reações, opiniões - quase tão vazia quanto um boneco. <br>
+               Logo nos primeiros episódios Rei aparece gravemente ferida vestida de seu traje de piloto, e em sua recuperação, não demonstra sofrimento ou medo da morte. Age com 
+               indiferença, como se aquilo fosse mais um dia normal. "Mas por que? Isso significa algo ou é só o jeito dela de ser? Já aconteceu isso antes? Se ela se machuca tanto, por que continua 
+               pilotando seu EVA? O que é tudo isso?"<br>
+               Perguntas como essas aparecem diversas vezes ao longo da história (não só com foco na Rei), mas em todas as ocasiões, a piloto da Unidade 00 permanece séria e indiferente.
+            </p>
+            <br>
+
+            <h2>Outros pilotos:</h2>
+            <ol type="1">
+                <li>Shinji Ikari (EVA-01)</li>
+                <li>Asuka Langley (EVA-02)</li>
+                <li>Toji Suzuhara (EVA-03)</li>
+                <li>Kaworu Nagisa (EVA-02 depois de Asuka)</li>
+                <li>Mari Makinami Illustrious (EVA-05 e EVA-06 - Filme)</li>
+            </ol>
+            </section> <!-- hst  -->
+
+        <section id="eva">
+            <h2>EVA Unidade 00</h2>
+            <ul class="eva-im">
+                <li><img class="eva00" src="img/eva00.jpg"></li>
+                <li><img class="pilot" src="img/reipilot.jpg"></li>
+            </ul>
+            <p>As Unidades Evangelions - os EVAs - são uma espécie de robôs, formados da fusão de biologia e tecnologia formato humanoide, criados para combater os Anjos (como são chamados os monstros). Existem
+                 3 principais EVAs, cada um com seu respectivo piloto (Rei, Shinji e Asuka). A unidade designada a Ayanami é o EVA 00 (imagem acima), a primeira a ser projetada e produzida. Por ser um protótipo adaptado,
+                 apresenta problemas e causa acidentes com muita frequência (alguns tão intensos que toda a unidade teve que ser refeita, alterando até sua aparência e cor), e por isso é menos vista em combate direto com 
+                 os anjos.<br>
+                 As Unidades Evangelions são muito mais do que apenas armas mecânicas gigantes: sua composição biológica vem do mesmo material que compõe os Anjos, e, de acordo com a história, cada EVA possui uma alma de
+                 alguma pessoa. No caso da Unidade 00, identidade da alma presente nela é a da própria Rei. Ou melhor, da Rei I, a primeira a ser criada, morta no primeiro teste do Protótipo da Unidade 00. O EVA é parte 
+                 dela, e ela é parte do EVA.
+              
+            </p>
+        </section> <!-- eva -->
+
+            </div> <!--  container3  -->
+
+        </section> <!--  hst1  -->
+
+        <section class="hst-vid">
+            <section id="video">
+               <h2>Abertura do Anime</h2>
+            <video controls width="1440" height="810">
+                <source src="vid/vid.mp4" type="video/mp4">
+                <track kind="subtitles" srclang="pt-br" src="vid/vid.vtt" label="legendas pt-br">
+            </video> 
+            </section> <!-- video -->
+
+        </section> <!-- hst-vid -->
+
+        <section id="mnt1">
+            <div class="container">
+        <section id="mnt">
+            <h2>Alma e Psique</h2>
+            <ul class="mnt-im">
+                <img class="rei6" src="img/rei6.jpg">
+            </ul>
+            <p>No universo de Neon Genesis Evangelion, a alma e a psique dos personagens é tratada constantemente em diversos contextos. Por exemplo, caso um piloto de EVA tenha uma psique fraca ou não resista ao ataque
+                 de algum Anjo a ela, sua compatibilidade com o EVA diminui, podendo até interromper sua conexão com a Unidade e impossibilitar pilotá-la. A alma, por outro lado, é a essência dos seres humanos. <br>
+                 Posteriormente, é revelado que há almas de 2 pessoas dentro das Unidades 00 e 01, e, mais adiante na história, descobre-se que Rei Ayanami é um projeto desenvolvido por Gendo Ikari com o objetivo de criar
+                 clones humanos a partir da junção de material genético humano com o dos Anjos - o mesmo material biológico usado no desenvolvimento dos EVAs. Ou seja, cada vez que uma Rei morre, outra é produzida e
+                 colocada no lugar da antiga, tendo consciência de que ela é só mais uma de tantas outras Reis que existiram e ainda existiriam. Isso explica, portanto, o motivo do comportamento peculiar de Ayanami. Desde 
+                 seu nascimento - ou melhor, sua criação - ela é preparada para morrer. Pilota a Unidade 00, se machuca, morre, e é substituída. E tudo se repete.<br>
+                 Assim, ela tem em mente que sua morte não fará diferença pra ninguém - pra humanidade, seus colegas, pra Nerv, pra Gendo. Outra Rei será criada para tomar seu lugar. Ela se vê como um boneco, usado, 
+                 desgastado e substituído, com o único propósito de obedecer seu "dono".
+            </p>
+        </section> <!--  mnt -->
+
+            <section id="suj">
+               <h2>Qual personagem você quer ver aqui?</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="mensagem">Sugestão:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+    
+                <button type="submit">Enviar</button>
+            </form> 
+            </section> <!--  suj  -->       
+            
+            </div> <!--  container  -->
+
+        <!-- Seção de Fotos: adicionada abaixo do formulário -->
+        <section id="fotos" style="margin-top:24px;">
+            <div class="container">
+                <section>
+                    <h2>Ajude a Rei</h2>
+                    <p>Clique no botão para ajudar Rei a ser forte!</p>
+                    <div class="photo-grid">
+                        <div class="photo-display"><img id="photo-display" src="img/rei2.png" alt="foto exibida"></div>
+                    </div>
+                    <div style="margin-top:12px; display:flex; gap:12px; align-items:center;">
+                        <button id="photo-count-btn" class="btn btn-primary">Clique aqui</button>
+                        <div>Cliques: <span id="photo-count">0</span></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        </section> <!--  mnt1  -->
+    
+    
+        <!--
+        <section id="relac">                         
+            <h2>Relações Sociais</h2>
+            <ul class="relac-im">
+                <li><img class="nome" src="algumacoisa.algumformato"></li>
+            </ul>
+            <p>papapapapppappa <br> 
+                dvndfjbdfbdibj <br> 
+                snvkvvoevhvhuoboudfhbouegbouby <br>
+                edboue beiouboeubuiegbuiebiu  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </section>
+    
+        <section id="sig">
+            <h2>Ficção vs Realidade</h2>
+            <p>papapapapppappa <br> 
+                dvndfjbdfbdibj <br> 
+                snvkvvoevhvhuoboudfhbouegbouby <br>
+                edboue beiouboeubuiegbuiebiu  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </section> -->
+
+        
+
+    </div> <!--  corpo  -->
+
+    
+        
+    <footer>
+        <p>&copy; Nerv - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="b.js"></script> <!-- LINKAR ARQUIVO DE JAVASCRIPT, TEM QUE SER NO FINAL DO HTML SEMPRE!!!  -->
+</body>
+</html>

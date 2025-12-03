@@ -1,0 +1,630 @@
+/* === DEFINIÇÕES GERAIS === */
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* Valores do modo claro (cores antigas do site) */
+    --bg: rgb(53, 12, 12); /* body fundo original */
+    --surface: rgb(53, 12, 12); /* fallback */
+    --text: #ffffff; /* texto principal nas versões antigas era branco */
+    --muted: #6b7280;
+    --accent: #0d6efd;
+    --navbar-bg: rgb(52, 58, 64); /* aproximado do .bg-dark do Bootstrap */
+    --navbar-text: #ffffff;
+    --text-block-bg: rgba(175, 0, 0, 0.7); /* .home-txt antigo */
+    --video-bg: rgba(255, 192, 203, 0.85);
+    /* cores específicas por seção (restauram os valores originais) */
+    --hst-bg: rgba(235, 147, 66, 0.7);
+    --mnt-bg: rgba(32, 129, 213, 0.85);
+    --eva-bg: rgba(53, 12, 12, 0.7);
+    --suj-bg: rgb(53, 12, 12);
+    --fotos-bg: rgba(80, 20, 60, 0.8); /* roxo/marrom para fotos */
+}
+
+html.dark{
+    /* cores do modo escuro — manter as atuais */
+    --bg: #0b0d10;
+    --surface: #0f1720;
+    --text: #e6eef8;
+    --muted: #9aa4b2;
+    --accent: #6ea8fe;
+    --navbar-bg: #b31b1b;
+    --navbar-text: #ffffff;
+    --text-block-bg: rgba(12, 18, 24, 0.6);
+    --video-bg: rgba(20, 30, 40, 0.6);
+    /* mapear variáveis específicas de seção para usar as superfícies escuras */
+    --hst-bg: var(--surface);
+    --mnt-bg: var(--surface);
+    --eva-bg: var(--surface);
+    --suj-bg: var(--surface);
+    --fotos-bg: var(--surface);
+}
+
+/* Forçar navbar do Bootstrap a respeitar variáveis */
+.navbar{
+    background-color: var(--navbar-bg) !important;
+    background: var(--navbar-bg) !important;
+}
+.navbar .navbar-brand, .navbar .nav-link, .navbar .btn{
+    color: var(--navbar-text) !important;
+}
+.navbar .btn-outline-light{
+    color: var(--navbar-text) !important;
+    border-color: currentColor !important;
+}
+
+/* espaço superior reservado para a navbar fixa do Bootstrap */
+body {
+    padding-top: 20px; /* altura aproximada da navbar */
+    padding-left: 20px; /* 20px border horizontal */
+    padding-right: 20px; /* 20px border horizontal */
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+section {
+    padding: 20px 20px;
+}
+
+/* === RODAPÉ === */
+footer {
+    background: var(--surface);
+    color: var(--text);
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+/* === CORPO === */
+.corpo {
+    background-image: url('img/rei9.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* garante que a imagem cubra a viewport inteira */
+    margin-bottom: 0;
+}
+
+.corpo section {
+    margin-left: 0;
+    padding-top: 20px;
+}
+
+/* === CONTAINERS === */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+/* Garante que as seções dentro dos containers alinhem pelo topo
+   e não sofram deslocamentos por paddings específicos */
+.container > section {
+    align-self: flex-start;
+    margin-top: 0;
+    padding-top: 0; /* usa padding geral de `section` em vez de adicionais */
+}
+
+#mnt1,
+#hst1 {
+    padding-top: 40px;
+}
+
+.container2 {
+    padding-top: 100px;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 24px 0;
+    flex-wrap: wrap;
+    align-items: stretch; /* força colunas a terem mesma altura */
+}
+
+.container3 > section {
+    flex: 1 1 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Previously #mnt was inside .container3; now it's below the video.
+    Make it a wide centered block with larger horizontal limit. */
+
+/* === VÍDEO === */
+/* === VÍDEO === */
+#video {
+    background: var(--video-bg);
+    color: var(--text);
+    border-radius: 4%;
+    padding: 34px; /* aumentado 1.2x (28 * 1.2) */
+    max-width: 1512px; /* 1260 * 1.2 */
+    margin: 0 auto 24px;
+}
+
+#video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1440px; /* 1200 * 1.2 */
+}
+
+.eva-im li {
+    flex: 0 0 48%;
+}
+
+.eva-im img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* === MENU DE NAVEGAÇÃO ===
+   Regras antigas limitavam a navbar do Bootstrap; aplicamos as
+   regras somente quando NÃO for uma navbar do Bootstrap (nav:not(.navbar)) */
+nav:not(.navbar) {
+    background-color: var(--navbar-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+nav:not(.navbar) ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav:not(.navbar) ul li {
+    margin: 0 20px;
+}
+
+nav:not(.navbar) ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav:not(.navbar) ul li a:hover {
+    color: #d11e1e;
+}
+
+#menu1 li {
+    font-size: 30px;
+    color: red;
+}
+
+#menu2 li {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* === SEÇÃO HOME === */
+#home {
+    background-color: var(--bg) !important;
+    background: url('img/rei5.jpg') center/cover no-repeat var(--bg) !important;
+    text-align: right;
+    min-height: 60vh;
+    flex-direction: column;
+    margin: 24px 0 24px;
+    padding: 16px;
+}
+
+#home h1 {
+    font-size: 48px;
+    color: var(--text) !important;
+}
+
+#home h2 {
+    font-size: 18px;
+    color: var(--text) !important;
+}
+
+.home-im {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.home-txt {
+    background-color: var(--text-block-bg) !important;
+    color: var(--text) !important;
+    border-radius: 4%;
+    border-top-right-radius: 0;
+    margin-left: auto;
+    max-width: 420px;
+    padding: 12px;
+}
+
+/* === HISTÓRIA === */
+#hst {
+    background: var(--hst-bg);
+    color: var(--text);
+    border-radius: 4%;
+    border-top-left-radius: 0;
+    width: 100%;
+    /* manter 20px de folga nas laterais e reduzir largura para não empurrar #eva */
+    max-width: min(720px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Em telas largas: garantir altura mínima para manter alinhamento entre #hst e #eva */
+@media (min-width: 992px) {
+    #hst, #eva {
+        min-height: 320px; /* ajuste para alinhar visualmente as colunas */
+    }
+}
+
+/* Em telas medias/grandes: igualar altura de #mnt e #suj para visual alinhado */
+@media (min-width: 992px) {
+    .container > #mnt,
+    .container > #suj {
+        min-height: 480px; /* ajuste — aumenta altura e alinha visualmente */
+    }
+
+    .container {
+        align-items: stretch; /* garantir que os filhos estiquem na mesma altura */
+    }
+}
+
+/* Forçar layout lado a lado quando houver largura suficiente
+   e evitar quebra por soma de larguras (flex-basis calculado) */
+@media (min-width: 992px) {
+    .container {
+        flex-wrap: nowrap; /* evitar quebra quando for possível */
+    }
+
+    /* formulário com largura fixa; mnt usa o restante do espaço disponível */
+    .container > #suj {
+        flex: 0 0 420px; /* largura fixa do formulário */
+        max-width: 420px;
+        align-self: stretch;
+    }
+
+    .container > #mnt {
+        /* pega o restante do espaço sem exceder o container */
+        flex: 1 1 calc(100% - 460px); /* 420px formulário + gap aproximado */
+        max-width: calc(100% - 460px);
+    }
+}
+
+/* Responsividade: permitir que #hst e #eva cresçam naturalmente em altura
+   em vez de forçar uma min-height fixa que causa overflow em telas pequenas. */
+#hst, #eva {
+    min-height: 0;
+    padding-bottom: 12px;
+}
+
+
+
+.hist-im {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.hist-im li {
+    margin-right: 4px;
+}
+
+#hst p {
+    max-width: 540px;
+}
+
+#hst h2 {
+    font-size: 32px;
+}
+
+#hst ol {
+    margin: 2px 0 0 15px;
+}
+
+#hst ol li {
+    margin-bottom: 9px;
+}
+
+/* === MONTANHA === */
+#mnt {
+    padding-top: 0;
+    background-color: var(--mnt-bg);
+    color: var(--text);
+    justify-content: center;
+    border-radius: 4%;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 100%;
+    max-width: 900px; /* reduzido para evitar excesso horizontal */
+    
+    padding: 24px; /* espaço interno para respirar */
+    padding-top: 6px;
+}
+
+/* Quando o form estiver ao lado, defina bases flexíveis */
+.container > #mnt {
+    /* ocupar mais espaço horizontal quando possível (antes 60%) */
+    flex: 1 1 72%;
+    /* permitir expansão em telas maiores, respeitando a folga de 20px */
+    max-width: min(1200px, calc(100% - 40px));
+}
+
+.container > #suj {
+    /* formulário maior para compartilhar mais largura com #mnt */
+    flex: 0 0 420px;
+    max-width: 420px;
+    align-self: stretch; /* permitir que pegue a mesma altura do #mnt */
+    margin: 0;
+    padding: 24px; /* aumentar espaço interno do formulário */
+    box-sizing: border-box;
+}
+
+#mnt p {
+    max-width: 500px;
+}
+
+#mnt h2 {
+    font-size: 32px;
+}
+
+/* === EVA === */
+.eva-im {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    flex-wrap: nowrap; /* alinhar horizontalmente as imagens */
+    justify-content: center;
+    align-items: center;
+}
+
+.eva-im li {
+    margin-right: 4px;
+}
+
+#eva {
+    padding-top: 0;
+    background-color: var(--eva-bg);
+    color: var(--text);
+    border-radius: 4%;
+    border-top-right-radius: 0;
+    width: 100%;
+    /* manter 20px de folga nas laterais e limitar largura para não encostar na borda */
+    max-width: min(760px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: end;
+}
+
+#eva p {
+    max-width: 750px;
+}
+
+#eva h2 {
+    font-size: 32px;
+}
+
+/* === SUGESTÕES === */
+.container4 {
+    padding: 80px 0 40px;
+}
+
+#suj {
+    align-items: center;
+    background: var(--suj-bg);
+    border-radius: 6%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--text);
+    padding: 20px;
+    width: 100%;
+    max-width: 440px;
+    box-sizing: border-box;
+}
+
+/* === FORMULÁRIO === */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+form label {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: rgb(53, 12, 12);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: rgb(95, 11, 11);
+}
+
+/* ===== MEDIA QUERIES: responsividade ===== */
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .container, .container3 {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .home-txt {
+        margin-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    #home h1 {
+        font-size: 36px;
+    }
+
+    #home {
+        text-align: center;
+        min-height: auto;
+    }
+
+    #video {
+        max-width: 100%;
+    }
+
+    #hst, #mnt, #eva, #suj {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Garantir que, em telas menores, o formulário fique abaixo do conteúdo e ocupe 100% */
+    .container > #mnt, .container > #suj {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    nav:not(.navbar) ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #home h1 {
+        font-size: 28px;
+    }
+
+    #home h2 {
+        font-size: 16px;
+    }
+
+    .container {
+        gap: 12px;
+    }
+
+    .container2 {
+        padding-top: 60px;
+    }
+}
+
+/* Em telas muito largas: permitir que #mnt cresça mais, mas ainda respeitando 20px de folga lateral */
+@media (min-width: 1200px) {
+    #mnt {
+        max-width: min(1200px, calc(100% - 40px));
+    }
+
+    .container > #mnt {
+        max-width: min(1200px, calc(100% - 40px));
+    }
+}
+
+/* === FORÇAR CORES EM MODO ESCURO/CLARO === */
+html.dark .navbar{
+    background-color: var(--navbar-bg) !important;
+    background: var(--navbar-bg) !important;
+}
+
+html.dark body{
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+html.dark .home-txt{
+    background-color: var(--text-block-bg) !important;
+    color: var(--text) !important;
+}
+
+html.dark #home{
+    color: var(--text) !important;
+}
+
+html.dark #home h1, html.dark #home h2{
+    color: var(--text) !important;
+}
+
+/* Seção de fotos com background */
+#fotos{
+    background-color: var(--fotos-bg) !important;
+    color: var(--text) !important;
+    padding: 24px 20px;
+    margin: 24px 0;
+}
+
+#fotos h2{
+    color: var(--text) !important;
+}
+
+#fotos p{
+    color: var(--text) !important;
+}
+
+/* Estilos para a galeria de fotos adicionada */
+.photo-grid{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.photo-card{
+    width:200px;
+    height:140px;
+    overflow:hidden;
+    border-radius:6px;
+    background:var(--surface);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.photo-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Estilo da foto principal exibida */
+.photo-display{
+    width: 640px;
+    max-width: 100%;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--surface);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.photo-display img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: opacity 360ms ease;
+    opacity: 1;
+}

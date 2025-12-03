@@ -1,0 +1,51 @@
+img {
+    margin: auto;
+    border-radius: 2%;
+}
+
+.rei2 {
+    height: 300px;;
+    margin-left: 40px;
+    margin-right: 550px;
+    margin-top: 260px;
+}
+
+.rei3 {
+    height: 200px;
+}
+
+.rei5 {
+    height: 280px;
+    border-radius: 8%;
+}
+
+.rei6 {
+    justify-content: center;
+    height: 260px;
+}
+
+.machuc {
+    height: 200px;
+}
+
+.pilot {
+    height: 260px;
+}
+
+.eva00 {
+    height: 260px
+}
+
+.clone {
+    height: 300px;
+    margin-top: 260px;
+}
+
+.nerv {
+    padding-right: 20px;
+    height: 40px;
+}
+
+.clone {
+    width: 400px;
+}
